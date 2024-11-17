@@ -1,0 +1,33 @@
+.container{
+    display: flex;
+    flex-direction: column;
+    width: 400px;
+    height: 540px;
+    border-top: 10px solid rgb(36, 136, 123);
+    border-bottom:10px solid rgb(250, 48, 75) ;
+    box-shadow: 5px 8px 10px rgba(0, 0, 0, 0.5);
+}
+.to-do{
+    display: flex;
+    justify-content: space-between;
+    padding: 14px;
+}
+.todo-text{
+    background: linear-gradient(to right, rgb(181, 243, 235),rgb(247, 177, 186) );
+    font-family: 'Quicksand',sans-serif;
+    font-size: 1em;
+    font-weight: bold;
+    border: none;
+    outline: none;
+    padding: 15px 15px;
+    border-radius: 15px;
+    flex-grow: 1;/*the input field takes the entire to do-text box's width*/
+
+}
+.to-do:has(.todo-checkbox:checked){/*if the checkbox in to do class is checks then do this style*/
+    
+    color: #07000055;
+    background: #eeeeee;
+    text-decoration: line-through;
+    order: 1;/*to push the checked elements to the bottom of the list*/
+}
